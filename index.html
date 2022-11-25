@@ -35,9 +35,11 @@
     </div>
     <!-- <script src="/brain.js"></script> -->
     <script>
+           if (localStorage.getItem('theme'))
+            document.getElementById('oooo').style.backgroundColor = localStorage.getItem('theme');
         function change(ref) {
             console.log(ref)
-
+localStorage.setItem('theme', ref)
             document.getElementById('oooo').style.backgroundColor = ref;
             if (ref === 'black') {
                 document.getElementById('search').style.color = 'white'
